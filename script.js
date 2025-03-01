@@ -51,11 +51,25 @@ function displayEmojis(arr) {
   
     arr.forEach((obj) => {
       const emoji = document.createElement("span");
-      emoji.style.fontSize = "4rem"
+      emoji.classList.add("emoji")
       emoji.innerText = obj.emoji;
+      //! Add function on click on emoji it should be cooppiedd to clipboard 
+      emoji.addEventListener("click", ()=>clickToCopy(emoji.innerText))
       fragment.append(emoji);
     });
+
     emojiContainer.append(fragment);
+  }
+//* click to copoy emoji function 
+   function  clickToCopy(text){
+    window.navigator.clipboard.writeText(text)
+    .then(response => {
+      alert("Emoji Copied Successfully");
+      
+    })
+    .catch(e=>{
+      alert("Something went wrong !")
+    })
   }
 
 //* emoji filter function
@@ -80,6 +94,18 @@ function search(emojiList, filterName){
     })
     return arr;
 }
+
+//! mode toggle feature
+const mode = document.getElementById("mode");
+
+const hider = document.getElementById("hider");
+
+const body = document.querySelector("body");
+
+mode.addEventListener("click", (e)=>{
+    hider.classList.toggle("right-move");
+    body.classList.toggle("dark-mode");
+}) 
 
 
 
