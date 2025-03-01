@@ -6,6 +6,9 @@ const filters = Array.from(document.querySelectorAll("li"));
 
 const searchInput = document.querySelector("input");
 
+const form  = document.querySelector("form");
+
+
 //! show all emojis by default 
 displayEmojis(emojiList);
 
@@ -28,7 +31,15 @@ searchInput.addEventListener("keyup",(e)=>{
     let filterName = e.target.value.toLowerCase();
     let filteredEmojis = search(emojiList, filterName);
     displayEmojis(filteredEmojis);
-        
+})
+
+// add event on form submission
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    // console.log(searchInput.value.toLowerCase());
+    let filterName = searchInput.value.toLowerCase();
+    let filteredEmojis = search(emojiList, filterName);
+    displayEmojis(filteredEmojis);
 })
 
 
