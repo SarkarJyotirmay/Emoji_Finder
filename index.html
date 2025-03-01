@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji finder</title>
+    <!-- tawilwind css -->
+    <link rel="stylesheet" href="output.css">
+    <!-- apni css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-[#ffdfbb]">
+    <h1 class="text-4xl font-bold text-center my-[1rem]">Emojee - Emoji 🔍 Application</h1>
+    <!--! nav -->
+    <div class="search max-[560px]:flex-col max-[560px]:px-0  flex justify-center items-center  gap-5 px-8 py-8">
+        <ul class="flex gap-4 justify-center items-center flex-wrap font-semibold text-lime-50">
+            <li class="cursor-pointer bg-[#fdbb8f] hover:bg-red-300 px-2 py-1 rounded-md flex justify-center items-center">All</li>
+            <li class="cursor-pointer bg-[#fdbb8f] hover:bg-red-300 px-2 py-1 rounded-md flex justify-center items-center">Face</li>
+            <li class="cursor-pointer bg-[#fdbb8f] hover:bg-red-300 px-2 py-1 rounded-md flex justify-center items-center">Heart</li>
+            <li class="cursor-pointer bg-[#fdbb8f] hover:bg-red-300 px-2 py-1 rounded-md flex justify-center items-center">Book</li>
+            <li class="cursor-pointer bg-[#fdbb8f] hover:bg-red-300 px-2 py-1 rounded-md flex justify-center items-center">Hand</li>
+            <li class="cursor-pointer bg-[#fdbb8f] hover:bg-red-300 px-2 py-1 rounded-md flex justify-center items-center">Sports</li>
+            <li class="cursor-pointer bg-[#fdbb8f] hover:bg-red-300 px-2 py-1 rounded-md flex justify-center items-center">Flag</li>
+        </ul>
+        <form action="" class="">
+         <input type="text" placeholder="🔍 Search emojies..." class="px-6 py-2 rounded-4xl bg-emerald-50">
+        </form>
+    </div>
+    <div class="emoji-container flex flex-wrap  justify-center gap-2 px-12"></div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
+<!-- npx @tailwindcss/cli -i ./input.css -o ./output.css --watch -->
