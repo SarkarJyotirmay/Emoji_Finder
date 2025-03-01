@@ -39,6 +39,7 @@ form.addEventListener("submit",(e)=>{
     // console.log(searchInput.value.toLowerCase());
     let filterName = searchInput.value.toLowerCase();
     let filteredEmojis = search(emojiList, filterName);
+    searchInput.value = "";
     displayEmojis(filteredEmojis);
 })
 
